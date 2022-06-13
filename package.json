@@ -4,7 +4,7 @@
 	"description": "Edit markdown like typora in vscode.",
 	"version": "2.5.9",
 	"publisher": "cweijan",
-	"icon": "images/icon.png",
+	"icon": "images/typora.png",
 	"engines": {
 		"vscode": "^1.60.0"
 	},
