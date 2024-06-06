@@ -19,7 +19,10 @@ handler.on("open", async (md) => {
   addAutoTheme(md.rootPath, config.editorTheme)
   handler.on('theme', theme => {
     loadTheme(md.rootPath, theme)
+    document.body.setAttribute('config-theme', theme);
   })
+  document.body.setAttribute('config-theme', config.editorTheme);
+  document.getElementById('_defaultStyles')?.parentNode?.removeChild(document.getElementById('_defaultStyles'))
   const editor = new Vditor('vditor', {
     value: md.content,
     _lutePath: md.rootPath + '/lute.min.js',
